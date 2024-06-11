@@ -5,4 +5,30 @@
 # если требуется (например, различный звук для `make_sound()`).
 # 3. Продемонстрируйте полиморфизм: создайте функцию `animal_sound(animals)`,
 # которая принимает список животных и вызывает метод `make_sound()` для каждого животного.
-Class Animal():
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def make_sound(self):
+        pass
+    def eat(self):
+        pass
+class Bird(Animal):
+    def make_sound(self):
+        print("Чик чирик")
+    def eat(self):
+        print("кушает траву, червей и рыб")
+class Mammal(Animal):
+    def make_sound(self):
+        print("млям")
+    def eat(self):
+        print("питается в основном молоком")
+class Reptile(Animal):
+    def make_sound(self):
+        print("тптсссс")
+    def eat(self):
+        print("питается в основном насекомыми")
+animals = [Bird(),Mammal(),Reptile()]
+for animal in animals:
+    animal.make_sound()
+    animal.eat()
