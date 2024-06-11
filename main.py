@@ -14,16 +14,31 @@ class Animal:
     def eat(self):
         pass
 class Bird(Animal):
+    def __init__(self):
+        super().__init__(name,age)
+        name = bird
+        age = 5
+        print(f'{name} обычно живет {age} лет')
     def make_sound(self):
         print("Чик чирик")
     def eat(self):
         print("кушает траву, червей и рыб")
 class Mammal(Animal):
+    def __init__(self):
+        super().__init__(name,age)
+        name = mammal
+        age = 10
+        print(f'{name} обычно живет {age} лет')
     def make_sound(self):
         print("млям")
     def eat(self):
         print("питается в основном молоком")
 class Reptile(Animal):
+    def __init__(self):
+        super().__init__(name,age)
+        name = reptile
+        age = 35
+        print(f'{name} обычно живет {age} лет')
     def make_sound(self):
         print("тптсссс")
     def eat(self):
