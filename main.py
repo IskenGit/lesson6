@@ -15,20 +15,30 @@ class Animal:
     def eat(self):
         pass
 class Bird(Animal):
+    def __init__(self, name, age):
+        super().__init__(name,age)
     def make_sound(self):
-        print("Чик чирик")
+        print(f'{self.name} создает звук "Чик чирик"')
     def eat(self):
         print("кушает траву, червей и рыб")
 class Mammal(Animal):
+    def __init__(self, name, age):
+        super().__init__(name, age)
     def make_sound(self):
-        print("млям")
+        print(f'{self.name} создает звук "млям"')
     def eat(self):
         print("питается в основном молоком")
 class Reptile(Animal):
+    def __init__(self, name, age):
+        super().__init__(name, age)
     def make_sound(self):
-        print("тптсссс")
+        print(f'{self.name} создает звук "тптсссс"')
     def eat(self):
         print("питается в основном насекомыми")
+# Функция для демонстрации полиморфизма
+def animal_sound(animals):
+    for animal in animals:
+        animal.make_sound()
 animals = [
     Bird(name="Воробей", age=3),
     Mammal(name="Коала", age=12),
@@ -37,3 +47,5 @@ animals = [
 for animal in animals:
     animal.make_sound()
     animal.eat()
+print("\nДемонстрация полиморфизма:")
+animal_sound(animals)
